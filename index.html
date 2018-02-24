@@ -1,6 +1,11 @@
 <h1>Hello World</h1>
 <script>
-  var urlParams = new URLSearchParams(window.location.search);
-
-  console.log(urlParams.has('id')); // true
+  function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+  var number = getUrlVars()["id"];
 </script>
