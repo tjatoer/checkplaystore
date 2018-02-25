@@ -13,7 +13,8 @@
       the value for number is:
       <script type="text/javascript">
         document.write(getURLParameter('id'))
-        var url = 'https://play.google.com/store/apps/details?id=com.tjatoerlabs.cek.tri'; // website you want to scrape
+        location.href = 'https://play.google.com/store/apps/details?id=com.tjatoerlabs.cek.tri'; // website you want to scrape
+        var url = location.href;
         document.getElementById("base-js").innerHTML = url;
       </script>
     </h1>
