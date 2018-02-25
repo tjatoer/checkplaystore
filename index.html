@@ -2,6 +2,9 @@
 <head>
   <script type="text/javascript">
     var number = 123;
+    function getURLParameter(name) {
+    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+    }
   </script>
 </head>
 
@@ -9,7 +12,7 @@
     <h1>
       the value for number is:
       <script type="text/javascript">
-        document.write(number)
+        document.write(getURLParameter('id'))
       </script>
     </h1>
 </body>
