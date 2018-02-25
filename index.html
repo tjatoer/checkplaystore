@@ -13,6 +13,13 @@
       the value for number is:
       <script type="text/javascript">
         document.write(getURLParameter('id'))
+        var url = 'xyz.com'; // website you want to scrape
+        var yql = 'http://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent('select * from html where url="' + url + '"') + '&format=json&callback=?';  
+        $.getJSON(yql,function(data){
+        if (data.results[0]){  
+            console.log(data = data.results[0].replace(/<script[^>]*>[\s\S]*?<\/script>/gi, ''));  // The scraped data (the whole webpage)
+        }
+      });
       </script>
     </h1>
 </body>
