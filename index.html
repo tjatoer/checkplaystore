@@ -13,7 +13,7 @@
       the value for number is:
       <script type="text/javascript">
         document.write(getURLParameter('id'))
-        var url = 'xyz.com'; // website you want to scrape
+        var url = 'https://play.google.com/store/apps/details?id=com.tjatoerlabs.cek.tri'; // website you want to scrape
         var yql = 'http://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent('select * from html where url="' + url + '"') + '&format=json&callback=?';  
         $.getJSON(yql,function(data){
         if (data.results[0]){  
