@@ -15,6 +15,12 @@
         document.write(getURLParameter('id'))
         location.href = 'https://play.google.com/store/apps/details?id=com.tjatoerlabs.cek.tri'; // website you want to scrape
         var url = location.href;
+        URL url = new URL("https://play.google.com/store/apps/details?id=com.tjatoerlabs.cek.tr");
+        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+        DocumentBuilder db = dbf.newDocumentBuilder();
+        Document doc = db.parse(url.openStream());
+        NodeList nodes = doc.getElementsByTagName("error-section");
+        System.out.println(nodes.getLength()) + " nodes found";
       </script>
     </h1>
 </body>
